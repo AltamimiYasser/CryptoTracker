@@ -19,7 +19,7 @@ extension Double {
         formatter.numberStyle = .currency
         formatter.locale = .current
         formatter.currencyCode = "SAR"
-        formatter.currencySymbol = "SR"
+        formatter.currencySymbol = "SAR"
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         return formatter
@@ -46,7 +46,7 @@ extension Double {
         formatter.numberStyle = .currency
         formatter.locale = .current
         formatter.currencyCode = "SAR"
-        formatter.currencySymbol = "SR"
+        formatter.currencySymbol = "SAR"
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 6
         return formatter
