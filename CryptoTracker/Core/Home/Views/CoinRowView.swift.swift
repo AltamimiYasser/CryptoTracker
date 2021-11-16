@@ -27,7 +27,7 @@ struct CoinRowView_swift: View {
             Spacer()
 
             VStack {
-                Text("\(coin.currentPrice)")
+                Text(coin.currentPrice.asCurrencyWith6Decimals())
                     .bold()
                     .foregroundColor(.theme.accent)
 

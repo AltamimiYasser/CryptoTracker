@@ -37,4 +37,20 @@ extension Double {
         let number = NSNumber(value: self)
         return currencyFormatter6.string(from: number) ?? "$0.00"
     }
+    
+    /// Convert a `Double` into a `String`
+    /// ```
+    /// Convert 1.23456 to "1.23"
+    /// ```
+    func asNumberString() -> String {
+        String(format: "%.2f", self)
+    }
+    
+    /// Convert a `Double` into a `String` with the percentage symbol
+    /// ```
+    /// Convert 1.23456 to "1.23%"
+    /// ```
+    func asPercentString() -> String {
+        String(format: "%.f", self) + "%"
+    }
 }
