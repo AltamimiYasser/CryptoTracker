@@ -31,7 +31,7 @@ struct CoinRowView_swift: View {
                     .bold()
                     .foregroundColor(.theme.accent)
 
-                Text("\(coin.priceChangePercentage24H ?? 0)%")
+                Text(coin.priceChangePercentage24H?.asPercentString() ?? "0%")
                     .foregroundColor(// change color if price change is moving up or down
                     (coin.priceChangePercentage24H ?? 0) >= 0 ?
                         .theme.green:

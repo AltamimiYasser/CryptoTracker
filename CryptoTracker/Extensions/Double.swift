@@ -51,6 +51,6 @@ extension Double {
     /// Convert 1.23456 to "1.23%"
     /// ```
     func asPercentString() -> String {
-        String(format: "%.2f", self) + "%"
+        asNumberString() + "%"
     }
 }
