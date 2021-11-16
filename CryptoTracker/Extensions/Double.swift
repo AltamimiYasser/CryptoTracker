@@ -9,6 +9,31 @@ import Foundation
 
 extension Double {
     
+        /// Convert a `Double` into a currency with 2 decimal places
+        /// ```
+        /// Convert 1234.56 to $1234,56
+        /// ```
+    private var currencyFormatter2: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.usesGroupingSeparator = true
+        formatter.numberStyle = .currency
+        formatter.locale = .current
+        formatter.currencyCode = "SAR"
+        formatter.currencySymbol = "SR"
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        return formatter
+    }
+    
+        /// Convert a `Double` into a currency as a `String` with 2 decimal places
+        /// ```
+        /// Convert 1234.56 to "$1234,56"
+        /// ```
+    func asCurrencyWith2Decimals() -> String {
+        let number = NSNumber(value: self)
+        return currencyFormatter2.string(from: number) ?? "$0.00"
+    }
+    
     /// Convert a `Double` into a currency with 2-6 decimal places
     /// ```
     /// Convert 1234.56 to $1234,56
@@ -22,8 +47,8 @@ extension Double {
         formatter.locale = .current
         formatter.currencyCode = "SAR"
         formatter.currencySymbol = "SR"
-        formatter.minimumIntegerDigits = 2
-        formatter.maximumIntegerDigits = 6
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 6
         return formatter
     }
     
