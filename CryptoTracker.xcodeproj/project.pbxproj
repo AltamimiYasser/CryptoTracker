@@ -15,9 +15,10 @@
 		3B9F74B927421A0E0088E5C0 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74B827421A0E0088E5C0 /* CircleButtonView.swift */; };
 		3B9F74BB2742351A0088E5C0 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74BA2742351A0088E5C0 /* CircleButtonAnimationView.swift */; };
 		3B9F74C0274301000088E5C0 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74BF274301000088E5C0 /* Coin.swift */; };
-		3B9F74C2274328CA0088E5C0 /* CoinRowView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C1274328CA0088E5C0 /* CoinRowView.swift.swift */; };
 		3B9F74C427432A030088E5C0 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C327432A030088E5C0 /* PreviewProvider.swift */; };
 		3B9F74C6274332020088E5C0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C5274332020088E5C0 /* Double.swift */; };
+		3B9F74C82743420C0088E5C0 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C72743420C0088E5C0 /* CoinRowView.swift */; };
+		3B9F74CA274365710088E5C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C9274365710088E5C0 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		3B9F74B827421A0E0088E5C0 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		3B9F74BA2742351A0088E5C0 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		3B9F74BF274301000088E5C0 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
-		3B9F74C1274328CA0088E5C0 /* CoinRowView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift.swift; sourceTree = "<group>"; };
 		3B9F74C327432A030088E5C0 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		3B9F74C5274332020088E5C0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		3B9F74C72743420C0088E5C0 /* CoinRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
+		3B9F74C9274365710088E5C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +118,8 @@
 		3B9F74AF274215200088E5C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B9F74C72743420C0088E5C0 /* CoinRowView.swift */,
 				3B9F74B12742154D0088E5C0 /* HomeView.swift */,
-				3B9F74C1274328CA0088E5C0 /* CoinRowView.swift.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +127,7 @@
 		3B9F74B0274215310088E5C0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3B9F74C9274365710088E5C0 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,13 +230,14 @@
 			files = (
 				3B9F74C0274301000088E5C0 /* Coin.swift in Sources */,
 				3B9F74B22742154D0088E5C0 /* HomeView.swift in Sources */,
+				3B9F74C82743420C0088E5C0 /* CoinRowView.swift in Sources */,
+				3B9F74CA274365710088E5C0 /* HomeViewModel.swift in Sources */,
 				3B8A030D2741FB6D006F7D36 /* CryptoTrackerApp.swift in Sources */,
 				3B9F74BB2742351A0088E5C0 /* CircleButtonAnimationView.swift in Sources */,
 				3B9F74B927421A0E0088E5C0 /* CircleButtonView.swift in Sources */,
 				3B9F74C427432A030088E5C0 /* PreviewProvider.swift in Sources */,
 				3B8A031D274205E6006F7D36 /* Color.swift in Sources */,
 				3B9F74C6274332020088E5C0 /* Double.swift in Sources */,
-				3B9F74C2274328CA0088E5C0 /* CoinRowView.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,8 +376,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,7 +388,7 @@
 				PRODUCT_NAME = "Crypto Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -402,8 +406,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,7 +418,7 @@
 				PRODUCT_NAME = "Crypto Tracker";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
