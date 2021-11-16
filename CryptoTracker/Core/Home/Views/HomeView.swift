@@ -34,6 +34,7 @@ struct HomeView_Previews: PreviewProvider {
                     .navigationBarHidden(true)
             }
                 .preferredColorScheme(.dark)
+.previewInterfaceOrientation(.portrait)
 
             NavigationView {
                 HomeView()
