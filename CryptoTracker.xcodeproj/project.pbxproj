@@ -16,6 +16,7 @@
 		3B9F74BB2742351A0088E5C0 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74BA2742351A0088E5C0 /* CircleButtonAnimationView.swift */; };
 		3B9F74C0274301000088E5C0 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74BF274301000088E5C0 /* Coin.swift */; };
 		3B9F74C2274328CA0088E5C0 /* CoinRowView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C1274328CA0088E5C0 /* CoinRowView.swift.swift */; };
+		3B9F74C427432A030088E5C0 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9F74C327432A030088E5C0 /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3B9F74BA2742351A0088E5C0 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		3B9F74BF274301000088E5C0 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		3B9F74C1274328CA0088E5C0 /* CoinRowView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift.swift; sourceTree = "<group>"; };
+		3B9F74C327432A030088E5C0 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3B8A031C274205E6006F7D36 /* Color.swift */,
+				3B9F74C327432A030088E5C0 /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				3B8A030D2741FB6D006F7D36 /* CryptoTrackerApp.swift in Sources */,
 				3B9F74BB2742351A0088E5C0 /* CircleButtonAnimationView.swift in Sources */,
 				3B9F74B927421A0E0088E5C0 /* CircleButtonView.swift in Sources */,
+				3B9F74C427432A030088E5C0 /* PreviewProvider.swift in Sources */,
 				3B8A031D274205E6006F7D36 /* Color.swift in Sources */,
 				3B9F74C2274328CA0088E5C0 /* CoinRowView.swift.swift in Sources */,
 			);
