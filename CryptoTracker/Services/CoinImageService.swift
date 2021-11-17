@@ -15,22 +15,23 @@ class CoinImageService {
     private var imageSubscription: AnyCancellable?
     private var fileManager = LocalFileManager.shard
     private let folderName = "Crypto_Tracker"
+    private let imageName: String
 
     init(coin: Coin) {
         self.coin = coin
-        getSavedImage()
+        self.imageName = coin.id
+        getImage()
     }
 
-    private func getSavedImage() {
-        if let image = fileManager.getImage(imageName: coin.id, folderName: folderName) {
-            self.image = image
+    private func getImage() {
+        if let savedImage = fileManager.getImage(imageName: coin.id, folderName: folderName) {
+            self.image = savedImage
         } else {
             downloadCoinImage()
         }
     }
 
     private func downloadCoinImage() {
-        print("downloading image")
         guard let url = URL(string: coin.image) else { return }
 
         imageSubscription =
@@ -39,13 +40,15 @@ class CoinImageService {
             return UIImage(data: data)
         }
             .sink(receiveCompletion: NetworkManager.shard.handleCompletion) { [weak self] returnImage in
-            if
-                let self = self,
-                let image = returnImage {
-                self.image = image
-                self.fileManager.saveImage(image, imageName: self.coin.id, folderName: self.folderName)
-                self.imageSubscription?.cancel()
-            }
+
+            // no returned image? exists
+            guard let self = self, let downloadedImage = returnImage else { return }
+
+            // there is a returned image? set self.image to it and save the image to file manager
+            self.image = downloadedImage
+            self.fileManager.saveImage(downloadedImage, imageName: self.imageName, folderName: self.folderName)
+            self.imageSubscription?.cancel() // then cancel subscription
+
         }
     }
 }

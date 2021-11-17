@@ -56,7 +56,6 @@ class LocalFileManager {
 
         // if image found return it
         if let image = UIImage(contentsOfFile: url.path) {
-            print("image found")
             return image
         }
         
