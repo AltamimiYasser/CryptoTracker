@@ -24,17 +24,11 @@ class CoinDataService {
             else { return }
 
         // get data using combine
-        coinSubscription = NetworkManager.shard.download(fromURL: url)
+        coinSubscription =
+            NetworkManager.shard.download(fromURL: url) // download the data
             .decode(type: [Coin].self, decoder: JSONDecoder()) // decode it
-        .sink { completion in // make sure data received and assign it to all coins
-
-            switch completion {
-            case .finished:
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        } receiveValue: { [weak self] returnedCoins in
+        .sink(receiveCompletion: // sink it with all coins property then cancel subscription
+                NetworkManager.shard.handleCompletion) { [weak self] returnedCoins in
             self?.allCoins = returnedCoins // now we have coins?
             self?.coinSubscription?.cancel()
         }

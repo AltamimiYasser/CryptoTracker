@@ -25,7 +25,7 @@ struct HomeView: View {
 
                 // columns titles
                 columnsHeaders
-                
+
                 // List
                 if !showPortfolio {
                     allCoinsList
