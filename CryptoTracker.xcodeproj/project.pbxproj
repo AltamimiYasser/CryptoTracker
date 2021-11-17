@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B58FF702745BB1400AF766A /* HomeStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58FF6F2745BB1400AF766A /* HomeStatView.swift */; };
 		3B786A0827449FF700213F58 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A0727449FF700213F58 /* UIApplication.swift */; };
 		3B786A0A2745987400213F58 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A092745987400213F58 /* Statistic.swift */; };
 		3B786A0C2745A3B200213F58 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A0B2745A3B200213F58 /* StatisticView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B58FF6F2745BB1400AF766A /* HomeStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatView.swift; sourceTree = "<group>"; };
 		3B786A0727449FF700213F58 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		3B786A092745987400213F58 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		3B786A0B2745A3B200213F58 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
@@ -168,8 +170,9 @@
 		3B9F74AF274215200088E5C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3B9F74C72743420C0088E5C0 /* CoinRowView.swift */,
 				3B9F74B12742154D0088E5C0 /* HomeView.swift */,
+				3B58FF6F2745BB1400AF766A /* HomeStatView.swift */,
+				3B9F74C72743420C0088E5C0 /* CoinRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				3B786A0C2745A3B200213F58 /* StatisticView.swift in Sources */,
 				3B824E9A2744626900F49E84 /* CoinImageViewModel.swift in Sources */,
 				3B824E962743E20400F49E84 /* CoinImageView.swift in Sources */,
+				3B58FF702745BB1400AF766A /* HomeStatView.swift in Sources */,
 				3B9B6EA627438328001F7E43 /* NetworkManager.swift in Sources */,
 				3B9F74C0274301000088E5C0 /* Coin.swift in Sources */,
 				3B786A0A2745987400213F58 /* Statistic.swift in Sources */,
