@@ -25,6 +25,9 @@ struct HomeView: View {
 
                 // columns titles
                 columnsHeaders
+                
+                // search bar
+                SearchBarView(searchText: $vm.searchText)
 
                 // List
                 if !showPortfolio {
