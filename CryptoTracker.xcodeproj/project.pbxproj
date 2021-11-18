@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B58FF702745BB1400AF766A /* HomeStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58FF6F2745BB1400AF766A /* HomeStatView.swift */; };
+		3B58FF722745C89B00AF766A /* MarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B58FF712745C89B00AF766A /* MarketData.swift */; };
 		3B786A0827449FF700213F58 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A0727449FF700213F58 /* UIApplication.swift */; };
 		3B786A0A2745987400213F58 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A092745987400213F58 /* Statistic.swift */; };
 		3B786A0C2745A3B200213F58 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B786A0B2745A3B200213F58 /* StatisticView.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		3B58FF6F2745BB1400AF766A /* HomeStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatView.swift; sourceTree = "<group>"; };
+		3B58FF712745C89B00AF766A /* MarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketData.swift; sourceTree = "<group>"; };
 		3B786A0727449FF700213F58 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		3B786A092745987400213F58 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		3B786A0B2745A3B200213F58 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				3B9F74BF274301000088E5C0 /* Coin.swift */,
 				3B786A092745987400213F58 /* Statistic.swift */,
+				3B58FF712745C89B00AF766A /* MarketData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				3B8A030D2741FB6D006F7D36 /* CryptoTrackerApp.swift in Sources */,
 				3B9F74BB2742351A0088E5C0 /* CircleButtonAnimationView.swift in Sources */,
 				3B9F74B927421A0E0088E5C0 /* CircleButtonView.swift in Sources */,
+				3B58FF722745C89B00AF766A /* MarketData.swift in Sources */,
 				3B9F74C427432A030088E5C0 /* PreviewProvider.swift in Sources */,
 				3B8A031D274205E6006F7D36 /* Color.swift in Sources */,
 				3B9F74C6274332020088E5C0 /* Double.swift in Sources */,
