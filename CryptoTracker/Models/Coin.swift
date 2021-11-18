@@ -64,7 +64,7 @@ import SwiftUI
 // MARK: - Coin
 struct Coin: Identifiable, Codable, Equatable {
     static func == (lhs: Coin, rhs: Coin) -> Bool {
-        lhs.id == rhs.id
+        lhs.id == rhs.id && lhs.name == rhs.name
     }
 
     let id, symbol, name: String
