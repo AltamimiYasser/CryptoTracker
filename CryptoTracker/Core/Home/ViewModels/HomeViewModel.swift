@@ -38,23 +38,7 @@ class HomeViewModel: ObservableObject {
 
         // subscribe to marketDataService
         marketService.$data
-            .map { data -> [Statistic] in
-            var stats = [Statistic]()
-
-            guard let data = data else { return stats }
-            let cap = Statistic(
-                title: "Market Cap",
-                value: data.MarketCap,
-                percentageChange: data.marketCapChangePercentage24HUsd)
-            let volum = Statistic(title: "24h Volume", value: data.volume)
-            let btcDominance = Statistic(title: "BTC Dominance", value: data.btcDominance)
-            let portfolio = Statistic(title: "Portfolio Value", value: "$0.00", percentageChange: 0)
-
-            stats.append(contentsOf: [
-                cap, volum, btcDominance, portfolio
-                ])
-            return stats
-        }
+            .map(mapGlobalMarketData)
             .sink { [weak self] receivedStats in
                 self?.statistics = receivedStats
             }
@@ -71,5 +55,24 @@ class HomeViewModel: ObservableObject {
                 || coin.symbol.lowercased().contains(searchText.lowercased())
                 || coin.id.lowercased().contains(searchText.lowercased())
         }
+    }
+
+    // map for the market data subscription
+    private func mapGlobalMarketData(data: MarketData?) -> [Statistic] {
+        var stats = [Statistic]()
+
+        guard let data = data else { return stats }
+        let cap = Statistic(
+            title: "Market Cap",
+            value: data.MarketCap,
+            percentageChange: data.marketCapChangePercentage24HUsd)
+        let volum = Statistic(title: "24h Volume", value: data.volume)
+        let btcDominance = Statistic(title: "BTC Dominance", value: data.btcDominance)
+        let portfolio = Statistic(title: "Portfolio Value", value: "$0.00", percentageChange: 0)
+
+        stats.append(contentsOf: [
+            cap, volum, btcDominance, portfolio
+        ])
+        return stats
     }
 }
