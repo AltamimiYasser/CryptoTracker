@@ -35,8 +35,12 @@ struct PortfolioView: View {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             navigationSaveButton
                         }
-
                     }
+                        .onChange(of: vm.searchText) { newValue in
+                            if newValue == "" {
+                                removeSelectedCoin()
+                            }
+                        }
 
                     if let selectedCoin = selectedCoin {
                         VStack(spacing: 20) {
