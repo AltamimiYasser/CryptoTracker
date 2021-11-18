@@ -76,7 +76,6 @@ struct HomeView_Previews: PreviewProvider {
 // MARK: - Extension
 extension HomeView {
     private var homeHeader: some View {
-
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
                 .animation(.none, value: showPortfolio)
@@ -86,6 +85,8 @@ extension HomeView {
                 .onTapGesture {
                 if showPortfolio {
                     showPortfolioView.toggle()
+                    UIApplication.shared.dismesKeyboard()
+                    vm.searchText = ""
                 }
             }
 
@@ -104,6 +105,8 @@ extension HomeView {
                 .onTapGesture {
                 withAnimation(.spring()) {
                     showPortfolio.toggle()
+                    UIApplication.shared.dismesKeyboard()
+                    vm.searchText = ""
                 }
             }
         }

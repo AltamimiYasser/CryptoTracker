@@ -62,7 +62,11 @@ import Foundation
 import SwiftUI
 
 // MARK: - Coin
-struct Coin: Identifiable, Codable {
+struct Coin: Identifiable, Codable, Equatable {
+    static func == (lhs: Coin, rhs: Coin) -> Bool {
+        lhs.id == rhs.id
+    }
+
     let id, symbol, name: String
     let image: String
     let currentPrice: Double
