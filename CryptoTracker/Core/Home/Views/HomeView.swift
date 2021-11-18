@@ -10,12 +10,17 @@ import SwiftUI
 struct HomeView: View {
 
     @EnvironmentObject private var vm: HomeViewModel
-    @State var showPortfolio = false
+    @State var showPortfolio = false // animate to the right
+    @State var showPortfolioView = false // portfolio sheet
 
     var body: some View {
         ZStack {
             // background layer
             Color.theme.background
+                .sheet(isPresented: $showPortfolioView) {
+                    PortfolioView(isShowingPortfolioView: $showPortfolioView)
+                        .environmentObject(vm)
+                }
 
             // content layer
             VStack {
@@ -28,7 +33,7 @@ struct HomeView: View {
 
                 // stats
                 HomeStatView(showPortfolio: $showPortfolio)
-                
+
                 // search bar
                 SearchBarView(searchText: $vm.searchText)
 
@@ -77,6 +82,11 @@ extension HomeView {
                 .animation(.none, value: showPortfolio)
                 .background {
                 CircleButtonAnimationView(animated: $showPortfolio)
+            }
+                .onTapGesture {
+                if showPortfolio {
+                    showPortfolioView.toggle()
+                }
             }
 
             Spacer()

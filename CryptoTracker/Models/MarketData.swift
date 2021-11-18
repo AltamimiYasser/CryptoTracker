@@ -182,14 +182,14 @@ struct MarketData: Codable {
 
     var MarketCap: String {
         if let cap = totalMarketCap.first(where: { $0.key == "sar" }) {
-            return "\(cap.value)"
+            return "SAR " + cap.value.formattedWithAbbreviations()
         }
         return ""
     }
 
     var volume: String {
         if let volume = totalVolume.first(where: { $0.key == "sar" }) {
-            return "\(volume.value)"
+            return "SAR " + volume.value.formattedWithAbbreviations()
         }
         return ""
     }

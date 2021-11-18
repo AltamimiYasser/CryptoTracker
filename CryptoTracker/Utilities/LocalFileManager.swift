@@ -38,11 +38,9 @@ class LocalFileManager {
         // then save the image
         do {
             try data.write(to: url)
-            print("Image Saved")
         } catch let error {
             print(error.localizedDescription)
         }
-
     }
 
     // get
